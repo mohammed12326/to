@@ -1,0 +1,192 @@
+*{
+    padding:0;/* تم اضافة بادينغ ومارجين 0 حتى لا يعطي تلقائيا للعناصر */
+    margin:0;
+}
+header{
+    height:100px;
+    width:100%;
+    background-image:linear-gradient(to right,red,rgb(255, 123, 0))
+}
+#logobox{
+    width:30%;
+    height:100%;
+    float:right;
+    background-color:#fafafa;
+}
+#h1Header{
+    float:left;
+    line-height:100px;
+    padding:0 15px;
+    overflow: auto;
+}
+#logo{
+    height:100%;
+    border-radius:50%;/*لتصبح الصورة دائرية*/
+}
+header a{
+    color:black;
+}
+nav{
+    width:70%;
+    text-align:center;
+    font-weight:bold;/*ليصبح الخط سميك*/
+    animation-name:changeBackground;
+    animation-duration:2s;
+}
+nav a{
+    text-decoration:none;/*لازالة الخط تحت عنصر */
+    color:white;
+    display:inline-block;
+}
+nav li{
+    display:inline-block;/*ليصبحوا بجانب بعضهم*/
+    line-height:100px;/*ليصبحوا في المنتصف*/
+    width:100px;
+    text-align:center;
+}
+nav a:hover{
+    background-color:white;
+    color:black;
+    height:100%;
+    width:100%;/*يجب ان نضع الميزة inline-block ضمن nav a اذا لم نضعها لن تعمل الويدز والهايت*/
+}
+main{
+    width:100%;
+    height:450px;
+    background-color:rgb(255,0,29);
+    border-top:3px solid white;
+    animation-name:changeBackground;
+    animation-duration:2s;
+    animation-iteration-count:infinite;/*تكرار دائما*/
+}
+main aside{
+    width: 30%;
+    height: 100%;
+    background-color: #fafafa;
+    text-align: center;
+    float: left;
+}
+aside img{
+    width:90%;
+}
+aside h1{
+    padding:20px 0;
+    border-bottom: 2px solid red;
+}
+.content{
+width: 70%;
+height: 100%;
+float:right;
+position:relative;
+}
+.box{
+text-align: center;
+width:400px;
+height:180px;
+position: absolute;
+background-color: #fafafa;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+padding: 15px 0;
+}
+.box h1{
+    border-bottom: 3px solid red;
+    padding:15px 0;
+}
+.box p{
+    direction: rtl;
+    text-align: justify;
+    font-family: 'Cairo', sans-serif;
+}
+.contactBox{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.contactBox img{
+    width:45px;
+    border-bottom:2px solid red;
+    padding:15px 3px;
+    
+}
+.contactBox img:hover{
+    width: 100px;
+    border-bottom:2px solid black;
+}
+@keyframes changeBackground{
+    0%{
+        background-color:white;
+    }
+    50%{
+        background-color:rgb(255, 72, 0);
+    }
+    100%{
+        background-color:rgb(223, 64, 24);
+    }
+    }
+@media only screen and (min-width:940px) and (max-width:1070px){
+    #logobox{
+        width: 40%;
+    }
+    .content{
+        width: 60%;
+    }
+    main aside{
+        width: 35%;
+
+    }
+}
+@media only screen and (max-width:940px) and (min-width:802px){
+    #logobox{
+        width:47%;
+    }
+}
+@media only screen and (max-width:801px){
+    header,main{
+        height: auto;
+    }
+    #logobox{
+        width:100%;
+        text-align: center;
+    }
+    #h1Header,#logo{
+        float:none;
+    }
+    header a{
+        text-decoration:none;
+    }
+    nav{
+        width:100%;
+    }
+    main aside{
+        width:100%;
+    }
+    main article{
+        width: 100%;
+    }
+    .content{
+        height: 230px;
+        width: 100%;
+        background-color:#fafafa;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
